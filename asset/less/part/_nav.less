@@ -1,0 +1,258 @@
+/*
+   [table of content]
+
+   1. Import
+        1.1. Import color
+        1.2. Import mixins
+        1.3. Import font
+   2. Mobile-s style
+        2.1. nav
+        2.2. logo container
+        2.3. menu container
+            2.3.1. menu link list
+                2.3.1.1.  menu link item
+                2.3.1.2.  menu link active
+        2.4. icon container
+            2.4.1. icon link
+                2.4.1.1 icon link container
+   3. Mobile-m style
+        3.1. nav
+        3.2. logo container
+        3.3. menu container
+            3.3.1. menu link list
+                3.3.1.1.  menu link item
+        3.4. icon container
+   4. Laptop style
+        4.1. menu container
+            4.1.1 menu link list
+        4.2. menu button container
+        4.3. icon container
+            4.3.1. icon link
+   5. Laptop-l style
+        5.1. nav
+        5.2. logo container
+        5.3. icon container
+            5.3.1. icon link
+                5.3.1.1. icon link element
+*/
+
+/*......... 1. Import ..........*/
+
+    /*......... 1.1 Import color ..........*/
+    @import '../global/_color.less';
+    /*......... 1.2. Import mixins ..........*/
+    @import '../global/_mixins.less';
+    /*......... 1.1 Import font ..........*/
+    @import '../global/_font.less';
+
+/*......... End import ..........*/
+
+/*......... 2. Mobile-s style ..........*/
+@media screen and (min-width: 320px) {
+
+    /*......... 2.1. nav ..........*/
+    nav {
+        .flex-cross--center;
+        flex-direction: column;
+        padding: 10px 30px 10px 29px;
+        border-bottom: 2px solid @_gray-6;
+
+        position: relative;
+    }
+
+    /*......... 2.2. logo container ..........*/
+    .logo {
+        &-container {
+            .flex-cross--center;
+            width: 200px;
+            margin-bottom: 20px;
+        }
+    }
+
+    /*......... 2.3. menu container ..........*/
+    .menu {
+        &-container {
+            display: none;
+            width: 100%;
+            padding: 10px 0;
+            border-bottom: 2px solid @_gray-6;
+
+            position: absolute;
+            left: 0;
+            top: 100%+2px;
+
+            .montserrat--bold;
+            font-weight: 700;
+            font-size: 14px;
+
+            background-color: @_white-0;
+        }
+
+        /*......... 2.3.1 menu link list ..........*/
+        &-link {
+            &__list {
+                .flex-cross--center;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            /*......... 2.3.1.1 menu link item ..........*/
+            &__item {
+                margin-bottom: 10px;
+
+                color: @_black-1;
+                text-transform: uppercase;
+            }
+
+            /*......... 2.3.1.2 menu link active ..........*/
+            &--active {
+                color: @_purple-0;
+            }
+        }
+    }
+
+    /*......... 2.4. icon container ..........*/
+    .icon {
+        &-container {
+            .flex-main--arround;
+            width: 100%;
+        }
+
+        /*......... 2.4.1. icon link ..........*/
+        &-link {
+            color: @_black-1;
+
+            /*......... 2.4.1.1. icon link element ..........*/
+            &__element {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+/*......... End mobile-s style ..........*/
+
+/*......... 3. Mobile-m style ..........*/
+@media screen and (min-width: 425px) {
+
+    /*......... 3.1. nav ..........*/
+    nav {
+        .flex-main--between;
+        flex-direction: row;
+    }
+
+    /*......... 3.2. logo container ..........*/
+    .logo {
+        &-container {
+            margin-bottom: 0;
+        }
+    }
+
+    /*......... 3.3. menu container ..........*/
+    .menu {
+
+        /*......... 3.3.1 menu link list ..........*/
+        &-link {
+            &__list {
+                .flex-main--between;
+                flex-direction: row;
+                padding: 15px 30px;
+
+                box-sizing: border-box;
+            }
+
+            /*......... 3.3.1.1 menu link item ..........*/
+            &__item {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    /*......... 3.4. icon container ..........*/
+    .icon {
+        &-container {
+            width: 30%;
+        }
+    }
+}
+
+/*......... End mobile-m style ..........*/
+
+/*......... 4. Laptop style ..........*/
+@media screen and (min-width: 1024px) {
+    /*......... 4.1. menu container ..........*/
+    .menu {
+        &-container {
+            display: block;
+            border: none;
+            width: auto;
+            flex-grow: 1;
+            max-width: 892px;
+
+            position: initial;
+        }
+
+        /*......... 4.1.1 menu link list ..........*/
+        &-link {
+            &__list {
+                padding-left: 40px;
+                padding-right: 20px;
+            }
+        }
+    }
+
+
+    /*......... 4.2. menu button container ..........*/
+    #menu-button-container {
+        display: none;
+    }
+
+    /*......... 4.3. icon container ..........*/
+    .icon {
+        &-container {
+            .flex-main--end;
+            width: 110px;
+        }
+
+        /*......... 4.3.1. icon link ..........*/
+        &-link {
+            margin-left: 30px;
+        }
+    }
+}
+
+/*......... End laptop style ..........*/
+
+/*......... 5. Laptop-L style ..........*/
+@media screen and (min-width: 1440px) {
+
+    /*......... 5.1. nav ..........*/
+    nav {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    /*......... 5.2. logo container ..........*/
+    .logo {
+        &-container {
+            margin-bottom: 0;
+        }
+    }    
+
+    /*......... 5.3. icon container ..........*/
+    .icon {
+        &-container {
+            width: 222px;
+        }
+
+        /*......... 5.3.1. icon link ..........*/
+        &-link {
+            /*......... 5.3.1.1. icon link element ..........*/
+            &__element {
+                font-size: 27px;
+            }
+        }
+    }
+}
+
+/*......... End laptop-l style ..........*/

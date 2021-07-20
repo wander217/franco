@@ -1,0 +1,388 @@
+/*
+   [table of content]
+
+   1. Import
+        1.1. Import color
+        1.2. Import mixins
+        1.3. Import font
+   2. Mobile-s style
+        2.1. main
+        2.2. banner container
+            2.2.1. banner image
+        2.3. feature container
+            2.3.1. banner content
+            2.3.2. banner title
+            2.3.3. banner subtitle
+        2.4. product container
+            2.4.1. product card
+            2.4.2. product image container 
+                   2.4.2.1 product image element
+            2.4.3. product cart container
+                   2.4.3.1. product cart button
+            2.4.4. product summary
+            2.4.5. product name
+            2.4.6. product star
+                   2.4.6.1. product star container
+                   2.4.6.2 product star active
+            2.4.7. product cost
+                   2.4.7.1. product cost container
+                   2.4.7.2. product cost old
+                   2.4.7.3. product cost new 
+   3. Tablet style
+        3.1. banner
+            3.1.1. banner container
+        3.2. product
+            3.2.1. product container
+   4. Laptop style
+         4.1. banner container
+            4.1.1. banner left
+            4.1.2. banner right
+            4.1.3. banner image
+        4.2. product
+            4.4.1. product card
+        4.3. feature
+            4.3.1. feature container
+            4.3.2. feature content
+            4.3.3. banner title
+            4.3.4. banner subtitle
+   5. Laptop-l style
+        5.1. main
+        5.2. banner
+            5.2.1. banner container
+        5.3. product
+            5.3.1. product container
+            5.3.2. product card
+            5.3.3. product summary
+            5.3.4. product star
+            5.3.5. product cost
+                5.3.5.1. product cost container 
+
+*/
+
+/*......... 1. Import ..........*/
+
+    /*......... 1.1 Import color ..........*/
+    @import '../global/_color.less';
+    /*......... 1.2. Import mixins ..........*/
+    @import '../global/_mixins.less';
+    /*......... 1.3. Import font ..........*/
+    @import '../global/_font.less';
+
+/*......... End import ..........*/
+
+/*......... 2. Mobile-s style ..........*/
+@media screen and (min-width: 320px) {
+    /*......... 2.1. main ..........*/
+    main {
+        .flex-main--center;
+        width: 100%;
+        margin-top: 30px;
+        padding: 0 10px;
+
+        box-sizing: border-box;
+    }
+
+    /*......... 2.2. banner container ..........*/
+    .banner {
+        &-container{
+          margin-bottom: 75px;  
+        }
+    
+        /*......... 2.2.1. banner image ..........*/
+        &-image {
+            margin-bottom: 10px;
+        }
+    }
+
+    /*......... 2.3. banner container ..........*/
+    .feature {
+        &-container {
+            .flex-main--center;
+            
+            .montserrat--bold;
+            text-transform: uppercase;
+        }
+
+        /*......... 2.3.1. banner content ..........*/
+        &-content {
+            .flex-cross--center;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 50px;
+
+            position: relative;
+        }
+
+        &-content::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: @_purple-0;
+        }
+
+        /*......... 2.3.2. banner title ..........*/
+        &-title {
+            margin-bottom: 10px;
+
+            font-size: 12px;
+            color: @_purple-0;
+            letter-spacing: 6px;
+        }
+
+        /*......... 2.3.3. banner subtitle ..........*/
+        &-subtitle {
+            margin-bottom: 27px;
+
+            font-size: 24px;
+            letter-spacing: 2.2px;
+        }
+    }
+
+    /*......... 2.4. product container ..........*/
+    .product {
+        /*......... 2.4.1. product card ..........*/
+        &-card {
+            margin-bottom: 43px;
+        }
+
+        /*......... 2.4.2. product image container ..........*/
+        &-image {
+            &-container {
+               position: relative;
+               margin-bottom: 10px; 
+            }
+            
+            /*......... 2.4.2.1 product image element ..........*/
+            &-element {
+                width: 100%;
+            }
+        }
+
+        /*......... 2.4.3. product cart container ..........*/
+        &-cart {
+            &-container {
+                .flex-main--center;
+                width: 120px;
+                height: 40px;
+
+                position: absolute;
+                bottom: 9px;
+                left: 4px;
+                z-index: 100;
+
+                background-color: @_white-0;
+            }
+
+            /*......... 2.4.3.1. product cart button ..........*/
+            &-button {
+                .montserrat--bold;
+                font-size: 12px;
+                text-transform: uppercase; 
+            } 
+
+            &-button:hover {
+                color: @_purple-0;
+            } 
+        }
+
+        /*......... 2.4.4. product summary ..........*/
+        &-summary {
+            .flex-cross--center;
+            flex-direction: column;
+            
+            text-transform: none;
+        }
+
+        /*......... 2.4.5. product name ..........*/
+        &-name {
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 12px;
+        }
+
+        /*......... 2.4.6. product star ..........*/
+        &-star {
+            /*......... 2.4.6.1. product star container ..........*/
+            &-container {
+                .flex-main--arround;
+                width: 35%;
+                margin-bottom: 9px;
+                
+                color: @_white-2;
+                font-size: 13px;
+            }
+
+            /*......... 2.4.6.2 product star active ..........*/
+            &--active {
+                color: @_yellow-0;
+            }
+        }
+
+        /*......... 2.4.7. product cost ..........*/
+        &-cost {
+            /*......... 2.4.7.1. product cost container ..........*/
+            &-container {
+                .flex-main--arround;
+                width: 50%;
+            }
+
+            /*......... 2.4.7.2. product cost old ..........*/
+            &--old {
+                color: @_gray-4;
+                font-weight: 400;
+                text-decoration: line-through;
+                font-size: 15px;
+            }
+
+            /*......... 2.4.7.3. product cost new ..........*/
+            &--new {
+                color: @_purple-0;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+/*......... End mobile-s style ..........*/
+
+/*......... 3. Tablet style ..........*/
+@media screen and (min-width: 768px) {
+     /*......... 3.1. banner  ..........*/
+     .banner {
+        /*......... 3.1.1. banner container ..........*/
+        &-right{
+          .flex-main--arround;
+          align-items: center; 
+        }
+    }
+
+    /*......... 3.2. product ..........*/
+    .product {
+        /*......... 3.2.1. product container ..........*/
+        &-container {
+            .flex-main--arround;
+        }
+    }
+}
+
+/*......... End tablet style ..........*/
+
+/*......... 4. Laptop style ..........*/
+@media screen and (min-width: 1024px) {
+    /*......... 4.1. banner container ..........*/
+     .banner {
+        &-container{
+          .flex-main--arround;
+          width: 100%;
+          max-width: 1140px; 
+        }
+        
+        /*......... 4.1.1. banner left ..........*/
+        &-left {
+            width: 65.79%;
+        }
+
+        /*......... 4.1.2. banner right ..........*/
+        &-right {
+            width: 31.67%;
+            .flex-main--between;
+            flex-direction: column;
+        }
+
+        /*......... 4.1.3. banner image ..........*/
+        &-image {
+            margin-bottom: 0;
+        }
+    }
+
+    /*......... 4.2. product ..........*/
+    .product {
+        /*......... 4.2.1. product card ..........*/
+        &-card {
+            width: 25%;
+            max-width: 263px;
+        }
+    }
+
+    /*......... 4.3. feature ..........*/
+    .feature {
+        /*......... 4.3.1. feature container ..........*/
+        &-container {
+          width: 100%;
+          max-width: 1140px; 
+        }
+
+        /*......... 4.3.2. feature content ..........*/
+        &-content {
+            .flex-cross--start;
+        }
+
+        /*......... 4.3.3. banner title ..........*/
+        &-title {
+            font-size: 12px;
+        }
+
+        /*......... 4.3.4. banner subtitle ..........*/
+        &-subtitle {
+            font-size: 24px;
+        }
+    }
+}
+
+/*......... End laptop style ..........*/
+
+/*......... 5. Laptop-l style ..........*/
+@media screen and (min-width: 1440px) {
+     /*......... 5.1. main ..........*/
+     main {
+        .flex-cross--center;
+        flex-direction: column;
+    }
+
+    /*......... 5.2. banner  ..........*/
+    .banner {
+        /*......... 5.2.1. banner container  ..........*/
+        &-container {
+          .flex-main--between;
+        }
+    }
+
+    /*......... 5.3. product ..........*/
+    .product {
+        /*......... 5.3.1. product container ..........*/
+        &-container{
+            .flex-main--between;
+        }
+
+        /*......... 5.3.2. product card ..........*/
+        &-card{
+            width: 100%;
+        }
+
+        /*......... 5.3.3. product summary ..........*/
+        &-summary {
+            .flex-cross--start;
+        }
+
+        /*......... 5.3.4. product star ..........*/
+        &-star {
+            &-container {
+                display: block;
+
+                font-size: 11px;
+            }
+        }
+
+        /*......... 5.3.5. product cost ..........*/
+        &-cost {
+            /*......... 5.3.5.1. product cost container ..........*/
+            &-container {
+                display: block;
+            }
+        }
+    }
+}
+
+/*......... End laptop-l style ..........*/

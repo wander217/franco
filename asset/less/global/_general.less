@@ -1,0 +1,74 @@
+/*
+   [table of content]
+
+   1. Declare size
+   2. Declare a   
+   3. Declare img 
+   4. Declare list
+   5. Declare button
+   6. Custom slick
+*/
+
+/*......... 1. Declare size ..........*/
+*,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/*......... End declare size ..........*/
+
+/*......... 2. Declare a ..........*/
+a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/*......... End declare a ..........*/
+
+/*......... 3. Declare img ..........*/
+img {
+    width: 100%;
+}
+
+/*......... End declare img ..........*/
+
+/*......... 4. Declare list ..........*/
+ul {
+    list-style: none;
+}
+
+/*......... End declare list ..........*/
+
+/*......... 5. Declare button ..........*/
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: inherit;
+}
+
+/*......... End declare button ..........*/
+
+
+/*......... 6. Custom slick ..........*/
+
+.slick-dots{
+    position: relative;
+    bottom: 0;
+    margin-top: 25px;
+}
+
+.slick-dots li button::before{
+    font-size: 10px;
+    color: #8262B5;
+    opacity: 0.4;
+}
+
+.slick-dots li.slick-active button::before{
+    font-size: 14px;
+    color: #8262B5;
+}
+
+/*......... End custom slick ..........*/

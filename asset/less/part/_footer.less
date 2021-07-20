@@ -1,0 +1,335 @@
+/*
+   [table of content]
+
+   1. Import
+        1.1. Import color
+        1.2. Import mixins
+        1.3. Import font
+   2. Mobile-s style
+        2.1. footer
+        2.2. footer up
+        2.3. footer about
+        2.4. footer title
+        2.5. footer info
+        2.6. footer social
+            2.6.1. footer social list
+        2.7. footer nav
+            2.7.1. footer nav container
+            2.7.2. footer left/right
+        2.8. footer link/social link
+        2.9. footer location
+            2.9.1. footer location container
+            2.9.2. footer location left/right
+            2.9.3. footer phone
+            2.9.4. footer info
+        2.10. footer down
+            2.10.1. container
+            2.10.2. heart
+            2.10.3. company
+        2.11. copy right
+        2.12. payment
+            2.12.1. payment container
+            2.12.2. payment list
+   3. Tablet style
+          3.1. footer
+            3.1.1 footer down
+                3.1.1.1. container
+   4. Laptop style
+       4.1. footer
+            4.1.1. footer up
+            4.1.2. footer title
+            4.1.3. footer list
+            4.1.4. footer link
+            4.1.5. footer about
+            4.1.6. footer nav
+
+*/
+
+/*......... 1. Import ..........*/
+
+    /*......... 1.1 Import color ..........*/
+    @import '../global/_color.less';
+    /*......... 1.2. Import mixins ..........*/
+    @import '../global/_mixins.less';
+    /*......... 1.1 Import font ..........*/
+    @import '../global/_font.less';
+
+/*......... End import ..........*/
+
+/*......... 2. Mobile-s style ..........*/
+@media screen and (min-width:320px) {
+    /*......... 2.1. footer ..........*/
+    footer {
+        width: 100%;
+        padding-top: 60px;
+
+        background-color: @_black-0;
+        box-sizing: border-box;
+    }
+
+    .footer {
+        /*......... 2.2. footer up ..........*/
+        &-up {
+            .flex-cross--center;
+            flex-direction: column;
+            padding-left: 10px;
+            padding-right: 10px;
+            max-width: 1140px;
+            width: 100%;
+
+            .montserrat;
+        }
+
+        /*......... 2.3. footer about ..........*/
+        &-about {
+            .flex-cross--center;
+            flex-direction: column;
+            max-width: 263px;
+            width: 100%;
+        }
+
+        /*......... 2.4. footer title ..........*/
+        &-title {
+            .flex-main--center;
+            width: 80%;
+            height: 48px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+
+            font-size: 16.4px;
+            text-transform: capitalize;
+            color: @_white-1;
+        } 
+
+        /*......... 2.5. footer info ..........*/
+        &-info {
+            margin-bottom: 45px;
+
+            .opensans--regular;
+            color: @_gray-1;
+            font-size: 14.5px;
+            line-height: 22px;
+        }
+
+        /*......... 2.6. footer social ..........*/
+        &-social {
+            width: 157px;
+            margin-bottom: 40px;
+
+            /*......... 2.6.1. footer social list ..........*/
+            &-list {
+               .flex-main--between;
+            }
+        }
+
+        /*......... 2.7. footer nav ..........*/
+        &-nav {
+            width: 100%;
+            max-width: 360px;
+            margin-bottom: 40px;
+            .flex-cross--center;
+            flex-direction: column;
+
+            /*......... 2.7.1. footer nav container ..........*/
+            &-container {
+                .flex-main--between;
+                width: 100%;
+            }
+
+            /*......... 2.7.2. footer left/right ..........*/
+            &-left,
+            &-right {
+                .flex-main--center;
+            }
+
+            &-left{
+                width: 54%;
+            }
+
+            &-right{
+                width: 46%;
+            }
+        }
+
+        /*......... 2.8. footer link/social link ..........*/
+        &-link,
+        &-social-link {
+            .opensans--regular;
+            color: @_gray-5;
+            font-size: 14px;
+            text-transform: capitalize;
+        }
+
+        &-link{
+            font-size: 13px;
+            margin-bottom: 15px;
+
+            &--active {
+                color: @_white-0;
+                text-decoration: underline;
+            }
+        }
+
+        /*......... 2.9. footer location ..........*/
+        &-location {
+            width: 100%;
+            max-width: 262px;
+            .flex-cross--center;
+            flex-direction: column;
+
+            /*......... 2.9.1. footer location container ..........*/
+            &-container {
+                width: 100%;
+                .flex-cross--start;
+                height: 125px;
+                font-size: 14px;
+            }
+
+            /*......... 2.9.2. footer location left/right ..........*/
+            &-left,
+            &-right {
+               .flex-main--between;
+                flex-direction: column;
+                height: 100%; 
+            }
+
+            &-left {
+                width: 12%;
+            }
+
+            &-right {
+                width: 88%;
+                line-height: 30px;
+            }
+
+            /*......... 2.9.3. footer phone ..........*/
+            &-phone {
+                margin-top: 22px;
+            }
+
+            /*......... 2.9.4. footer info ..........*/
+            &-info {
+                width: 100%;
+                max-width: 200px;
+            }
+        }
+
+        /*......... 2.10. footer down ..........*/
+        &-down {
+            width: 100%;
+            border-top: 2px solid rgba(255, 255, 255, 0.1);
+            .flex-main--center;
+
+            /*......... 2.10.1. container ..........*/
+            &-container{
+                .flex-cross--center;
+                flex-direction: column;
+                padding: 23px 10px;
+                max-width: 1140px;
+                width: 100%;
+
+                .opensans--regular;
+                color: @_gray-1;
+                font-size: 13px;
+            }
+            
+            /*......... 2.10.2. heart ..........*/
+            &-heart {
+                color: @_red-0;
+            }
+
+            /*......... 2.10.3. company ..........*/
+            &-company {
+                color: @_white-0;
+            }
+        }
+    }
+
+    /*......... 2.11. copy right ..........*/
+    .copy-right {
+        text-align: center;
+        word-spacing: 3px;
+    }
+
+    /*......... 2.12. payment ..........*/
+    .payment {
+        /*......... 2.12.1. payment container ..........*/
+        &-container {
+            width: 150px;
+        }
+
+        /*......... 2.12.2. payment list ..........*/
+        &-list {
+            .flex-main--arround;
+
+            font-size: 20px;
+        }
+    }
+}
+
+/*......... End mobile-s style ..........*/
+
+/*......... 3. Tablet style ..........*/
+@media screen and (min-width: 768px) {
+   /*......... 3.1. footer ..........*/
+   .footer {
+        /*......... 3.1.1 footer down ..........*/
+        &-down {
+            /*......... 3.1.1.1. container ..........*/
+            &-container{
+                .flex-main--between;
+                flex-direction: row;
+            }
+        }
+    }   
+}
+
+/*......... 3. End tablet style ..........*/
+
+/*......... 4. Laptop style ..........*/
+@media screen and (min-width: 1024px) {
+    footer{
+        .flex-cross--center;
+        flex-direction: column;
+    }
+    /*......... 4.1. footer ..........*/
+    .footer {
+         /*......... 4.1.1. footer up ..........*/
+         &-up {
+             .flex-main--between;
+             flex-direction: row;
+             align-items: flex-start;
+         }
+
+         /*......... 4.1.2. footer title ..........*/
+        &-title {
+            width: 100%;
+            .flex-main--start;
+        }
+
+         /*......... 4.1.3. footer list ..........*/
+         &-list {
+            width: 100%;
+            height: 200px;
+        }
+
+         /*......... 4.1.4. footer link ..........*/
+         &-link {
+             font-size: 14px;
+             margin-bottom: 12px;
+         }
+
+        /*......... 4.1.5. footer about ..........*/
+        &-about {
+            .flex-cross--start;
+            flex-direction: column;
+        }
+
+        /*......... 4.1.6. footer nav ..........*/
+        &-nav {
+            margin-bottom: 10px;
+        }
+     }   
+ }
+ 
+ /*......... 3. End laptop style ..........*/

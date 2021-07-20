@@ -1,0 +1,130 @@
+/*
+   [table of content]
+
+   1. Import
+        1.1. Import color
+        1.1. Import mixins
+   2. Mobile-s style
+        2.1. header
+        2.2. header container
+            2.2.1. header link
+   3. Tablet style
+        3.1. header
+        3.2. header container
+            3.2.1. header link
+                   3.2.1.1. header link element
+                   3.2.1.2. first header link
+   4. Laptop style
+        4.1. header
+        4.2. header container
+   5. Laptop-l style
+        5.1. header
+*/
+
+
+/*......... 1. Import ..........*/
+
+    /*......... 1.1 Import color ..........*/
+    @import '../global/_color.less';
+    /*......... 1.2. Import mixins ..........*/
+    @import '../global/_mixins.less';
+
+/*......... End import ..........*/
+
+/*......... 2. Mobile-s style ..........*/
+@media screen and (min-width:320px) {
+
+    /*......... 2.1. header ..........*/
+    header {
+        .flex-main--center;
+        padding: 12px 0;
+        
+        .opensans--regular;
+        color: @_gray-2;
+        font-size: 12px;
+
+        background-color: @_black-0;
+    }
+
+    /*......... 2.2 header container ..........*/
+    .header {
+        &-container {
+            .flex-main--arround;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        /*......... 2.2.1. header link ..........*/
+        &-link {
+            text-transform: capitalize;
+            color: @_gray-2;
+        }
+    }
+}
+
+/*......... End mobile-s style ..........*/
+
+/*......... 3. Tablet style ..........*/
+@media screen and (min-width: 768px) {
+
+    /*......... 3.1. header ..........*/
+    header {
+        .flex-main--between;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    /*......... 3.2. header container ..........*/
+    .header {
+        &-container {
+            width: 250px;
+            margin-top: 0;
+        }
+
+        /*......... 3.2.1. header link ..........*/
+        &-link {
+            /*......... 3.2.1.1. header link element ..........*/
+            &__element {
+                margin-right: 5px;
+            }
+
+            /*......... 3.2.1.2. first header link element ..........*/
+            &-first {
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+/*......... End tablet style ..........*/
+
+/*......... 4. Laptop style ..........*/
+@media screen and (min-width:1024px) {
+
+    /*......... 4.1. header ..........*/
+    header {
+        font-size: 15px;
+    }
+
+    /*......... 4.2 header container ..........*/
+    .header {
+        &-container {
+            width: auto;
+        }
+    }
+}
+
+/*......... End laptop style ..........*/
+
+/*......... 5. Laptop-l style ..........*/
+@media screen and (min-width:1440px) {
+
+    /*......... 5.1. header ..........*/
+    header {
+        padding-bottom: 15px;
+
+        font-size: 14px;
+    }
+}
+
+/*......... End laptop-l style ..........*/
