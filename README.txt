@@ -1,3 +1,4 @@
+- author : Trịnh Quang Thịnh
 - breakpoint:
 	mobile-s: 320px
 	mobile-m: 375px
