@@ -9,6 +9,17 @@
         2.1. main
         2.2. banner container
             2.2.1. banner image
+            2.2.2. banner left
+                2.2.2.1. banner left summary
+                2.2.2.2. banner left ads
+                2.2.2.3. banner left button
+            2.2.3. banner right
+                2.2.3.1. banner right item 
+                2.2.3.2. banner right up
+                2.2.3.3. banner right down
+                    2.2.3.3.1. banner right down summary
+                    2.2.3.3.2. banner right down ads
+                    2.2.3.3.3. banner right down sub ads
         2.3. feature container
             2.3.1. banner content
             2.3.2. banner title
@@ -139,7 +150,7 @@
                 width: 100%;
             }
 
-            /*......... 2.2.2.3. banner left summary ..........*/
+            /*......... 2.2.2.3. banner left button ..........*/
             &__button {
                 justify-content: center;
                 width: 108px;
@@ -155,6 +166,7 @@
                 background-color: @_purple-0;
             }
         }
+
 
         /*......... 2.2.3. banner right ..........*/
         &-right {
@@ -228,19 +240,6 @@
                     margin-bottom: 16px;
                     font-size: 21px;
                 }    
-
-                 /*......... 2.2.2.3. banner left summary ..........*/
-                &__button {
-                    justify-content: center;
-                    width: 108px;
-                    height: 40px;
-
-                    font-size: 14px;
-                    color: @_white-0;
-                    text-transform: capitalize;
-
-                    background-color: @_purple-0;
-                }
             }
         }
     }
@@ -335,7 +334,6 @@
             &-button {
                 .flex-cross--center;
                 justify-content: center;
-                height: 100%;
 
                 .montserrat--bold;
                 font-size: 12px;
