@@ -80,6 +80,7 @@
             position: absolute;
             left: 0;
             top: 100%+2px;
+            z-index: 1000;
 
             .montserrat--bold;
             font-weight: 700;
@@ -102,7 +103,12 @@
 
                 color: @_black-1;
                 text-transform: uppercase;
+
+                &:hover {
+                    color: @_purple-0;
+                }
             }
+
 
             /*......... 2.3.1.2 menu link active ..........*/
             &--active {
@@ -187,7 +193,8 @@
             border: none;
             width: auto;
             flex-grow: 1;
-            max-width: 892px;
+            max-width: 895px;
+            margin-left: 5px;
 
             position: initial;
         }
@@ -250,6 +257,16 @@
             /*......... 5.3.1.1. icon link element ..........*/
             &__element {
                 font-size: 27px;
+            }
+        }
+    }
+
+    /*......... 5.4. menu link item ..........*/
+    .menu {
+        /*......... 5.4.1 menu link list ..........*/
+        &-link {
+            &__item {
+                padding-right: 5px;
             }
         }
     }

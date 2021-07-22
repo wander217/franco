@@ -98,22 +98,29 @@
     <div class="banner-container">
       <!-- banner left -->
       <div class="banner-left">
-        <a href="#">
-          <img class="banner-image" src="asset/image/banner/1.png" alt="banner 1" />
-        </a>
+        <img class="banner-image" src="asset/image/banner/1.png" alt="banner 1" />
+        <div class="banner-left__summary">
+          <p class="banner-left__ads">Two High-end Materials</p>
+          <a class="banner-left__button" href="#">shop now</a>
+        </div>
       </div>
       <!-- end banner left -->
       <!-- banner right -->
       <div class="banner-right">
         <div class="banner-right__item">
-          <a href="#">
-            <img class="banner-image" src="asset/image/banner/2.png" alt="banner 2" />
-          </a>
+          <img class="banner-image" src="asset/image/banner/2.png" alt="banner 2" />
+          <div class="banner-right-up__summary">
+            <p class="banner-right-up__ads">small thing</p>
+            <p class="banner-right-up__sub-ads">make different</p>
+          </div>
         </div>
         <div class="banner-right__item">
-          <a href="#">
             <img class="banner-image" src="asset/image/banner/3.png" alt="banner 3" />
-          </a>
+            <div class="banner-right-down__summary">
+              <p class="banner-right-down__ads">folio</p>
+              <p class="banner-right-down__sub-ads">backpack</p>
+              <a class="banner-right-down__button" href="#">shop now</a>
+            </div>
         </div>
       </div>
       <!-- end banner right -->
@@ -134,11 +141,11 @@
           <!-- card image -->
           <div class="product-image-container">
             <img class="product-image-element" src="asset/image/product/1.png" alt="product 1"/>
-            <a href="#" class="product-cart-container" >
-              <button class="product-cart-button">
+            <button class="product-cart-container">
+              <a href="#" class="product-cart-button" >
                 add to cart
-              </button>
-            </a>
+              </a>
+            </button>
           </div>
           <!-- end card image -->
           <!-- card summary -->
@@ -597,30 +604,48 @@
         <div class="footer-info footer-location-container">
           <ul class="footer-location-left">
             <li>
-                <i class="far fa-map"></i>
+              <div class="footer-location-icon">
+                <a href="#">
+                  <i class="far fa-map"></i>
+                </a>
+              </div>
             </li>
             <li class="footer-location-phone">
-                <i class="fas fa-phone-alt"></i>
+              <div class="footer-location-icon">
+                <a href="telto:+123456789">
+                  <i class="fas fa-phone-alt"></i>
+                </a>
+              </div>
             </li>
             <li>
-                <i class="far fa-envelope"></i>
+              <div class="footer-location-icon">
+                <a href="mailto:contact@yourdomain.com">
+                  <i class="far fa-envelope"></i>
+                </a>
+              </div>
             </li>
           </ul>
           <ul class="footer-location-right">
               <li>
                   <div class="footer-location-info">
-                    500 Hennessy Road <br>Causeway Bay, Hong Kong
+                    <a href="#">
+                        500 Hennessy Road <br>Causeway Bay, Hong Kong
+                    </a>
                   </div> 
               </li>
               <li>
-                  <p class="footer-location-info">
-                    +1 23456789
-                  </p>
+                  <div class="footer-location-info">
+                    <a href="telto:+123456789">
+                       +1 23456789
+                    </a>
+                  </div>
               </li>
               <li>
-                  <p class="footer-location-info">
-                    contact@yourdomain.com
-                  </p>
+                  <div class="footer-location-info">
+                      <a href="mailto:contact@yourdomain.com" >
+                        contact@yourdomain.com
+                    </a>
+                  </div>
               </li>
           </ul> 
         </div>

@@ -31,9 +31,15 @@
             2.12.1. payment container
             2.12.2. payment list
    3. Tablet style
-          3.1. footer
-            3.1.1 footer down
-                3.1.1.1. container
+        3.1. footer
+            3.1.1. footer up 
+            3.1.2 footer down
+                3.1.2.1. container
+            3.1.3. footer about
+                3.1.3.1. footer left
+                3.1.3.2. footer phone
+                3.1.3.3. footer right
+        3.2. copy right
    4. Laptop style
        4.1. footer
             4.1.1. footer up
@@ -42,6 +48,10 @@
             4.1.4. footer link
             4.1.5. footer about
             4.1.6. footer nav
+        4.2. copy right 
+        4.3. payment
+            4.3.1. payment container
+            4.3.2. payment list
 
 */
 
@@ -78,13 +88,14 @@
             width: 100%;
 
             .montserrat;
+
+            box-sizing: border-box;
         }
 
         /*......... 2.3. footer about ..........*/
         &-about {
             .flex-cross--center;
             flex-direction: column;
-            max-width: 263px;
             width: 100%;
         }
 
@@ -158,9 +169,14 @@
             color: @_gray-5;
             font-size: 14px;
             text-transform: capitalize;
+
+            &:hover {
+                color: @_white-0;
+                text-decoration: underline;
+            }
         }
 
-        &-link{
+        &-link {
             font-size: 13px;
             margin-bottom: 15px;
 
@@ -195,6 +211,9 @@
 
             &-left {
                 width: 12%;
+                padding-top: 2px;
+                padding-bottom: 1px;
+                box-sizing: border-box;
             }
 
             &-right {
@@ -211,7 +230,23 @@
             &-info {
                 width: 100%;
                 max-width: 200px;
+                margin-bottom: 1.5px;
+
+                &:hover {
+                    color: @_white-0;;
+                }
             }
+
+            &-info:last-child {
+                margin-top: 0;
+            }
+
+             /*......... 2.9.5. footer icon ..........*/
+             &-icon {
+                &:hover {
+                    color: @_white-0;;
+                }
+             }
         }
 
         /*......... 2.10. footer down ..........*/
@@ -248,7 +283,8 @@
     /*......... 2.11. copy right ..........*/
     .copy-right {
         text-align: center;
-        word-spacing: 3px;
+        order: 2;
+        font-size: 11px;
     }
 
     /*......... 2.12. payment ..........*/
@@ -256,6 +292,8 @@
         /*......... 2.12.1. payment container ..........*/
         &-container {
             width: 150px;
+            margin-bottom: 10px;
+            order: 1;
         }
 
         /*......... 2.12.2. payment list ..........*/
@@ -273,15 +311,54 @@
 @media screen and (min-width: 768px) {
    /*......... 3.1. footer ..........*/
    .footer {
-        /*......... 3.1.1 footer down ..........*/
+        /*......... 3.1.1. footer up ..........*/
+        &-up {
+            .flex-main--arround;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        /*......... 3.1.2 footer down ..........*/
         &-down {
-            /*......... 3.1.1.1. container ..........*/
+            /*......... 3.1.2.1. container ..........*/
             &-container{
                 .flex-main--between;
                 flex-direction: row;
+                height: 22px;
+            }
+        }
+
+        /*......... 3.1.3. footer about ..........*/
+        &-about {
+            flex-grow: 1;
+            padding-left: 50px;
+            padding-right: 50px;
+            box-sizing: border-box;
+        }
+
+        /*......... 3.1.3. footer location ..........*/
+        &-location {
+            /*......... 3.1.3.1. footer left ..........*/
+            &-left {
+                padding-top: 6px;
+                padding-bottom: 4px;
+            }
+            /*......... 3.1.3.2. footer phone ..........*/
+            &-phone {
+                margin-top: 30px;
+            }
+
+            /*......... 3.1.3.3. footer right ..........*/
+            &-right {
+                height: 127px;
             }
         }
     }   
+    /*......... 3.2. copy right ..........*/
+    .copy-right {
+        word-spacing: 3px;
+        font-size: 11px;
+    }
 }
 
 /*......... 3. End tablet style ..........*/
@@ -294,12 +371,12 @@
     }
     /*......... 4.1. footer ..........*/
     .footer {
-         /*......... 4.1.1. footer up ..........*/
-         &-up {
-             .flex-main--between;
-             flex-direction: row;
-             align-items: flex-start;
-         }
+        /*......... 4.1.1. footer up ..........*/
+        &-up {
+            .flex-main--between;
+            padding-left: 0;
+            padding-right: 0;
+        }
 
          /*......... 4.1.2. footer title ..........*/
         &-title {
@@ -317,12 +394,17 @@
          &-link {
              font-size: 14px;
              margin-bottom: 12px;
+             width: fit-content;
          }
 
         /*......... 4.1.5. footer about ..........*/
         &-about {
             .flex-cross--start;
             flex-direction: column;
+            max-width: 263px;
+            flex-grow: unset;
+            padding-left: 0;
+            padding-right: 0;
         }
 
         /*......... 4.1.6. footer nav ..........*/
@@ -330,6 +412,29 @@
             margin-bottom: 10px;
         }
      }   
+
+     /*......... 4.2. copy right ..........*/
+    .copy-right {
+        order: 1;
+        font-size: 13px;
+        letter-spacing: .15px;
+    }
+
+    /*......... 4.3. payment ..........*/
+    .payment {
+        /*......... 4.3.1. payment container ..........*/
+        &-container {
+            order: 2;
+            margin-bottom: 0;
+        }
+
+        /*......... 4.3.2. payment list ..........*/
+        &-list {
+            justify-content: space-between;
+            margin-right: 1px;
+            align-items: flex-start;
+        }
+    }
  }
  
  /*......... 3. End laptop style ..........*/

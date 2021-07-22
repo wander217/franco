@@ -31,24 +31,45 @@
    3. Tablet style
         3.1. banner
             3.1.1. banner container
-        3.2. product
-            3.2.1. product container
+                3.1.1.1. banner right item
+                3.1.1.2. banner right down
+                    3.1.1.2.1. banner right down summary
+            3.1.2. banner left
+                3.1.2.1. banner left summary
+            3.2. product
+                3.2.1. product container
+                3.2.2. product card
+                3.2.3. product name
+                3.2.4. product star container
+                3.2.5. product star cart
+                    3.2.5.1. product star cart container
+                    3.2.5.2. product star cart button
    4. Laptop style
          4.1. banner container
             4.1.1. banner left
+                4.1.1.1. banner left summary
+                4.1.1.2. banner left ads
             4.1.2. banner right
-            4.1.3. banner image
-        4.2. product
-            4.4.1. product card
+                4.1.2.1. banner right item
+             4.1.3. banner image
         4.3. feature
             4.3.1. feature container
-            4.3.2. feature content
+             4.3.2. feature content
             4.3.3. banner title
             4.3.4. banner subtitle
+        4.4. product
+            4.4.1. product container
+            4.4.2. product star container
+            4.4.3. product star cart
+                4.4.3.1. product star cart container
+                4.4.3.2. product star cart button 
    5. Laptop-l style
         5.1. main
         5.2. banner
             5.2.1. banner container
+            5.2.2. banner right
+                5.2.2.1. banner right down
+                    5.2.2.1.1. banner right down summary
         5.3. product
             5.3.1. product container
             5.3.2. product card
@@ -85,12 +106,142 @@
     /*......... 2.2. banner container ..........*/
     .banner {
         &-container{
-          margin-bottom: 75px;  
+          margin-bottom: 73px;  
         }
     
         /*......... 2.2.1. banner image ..........*/
         &-image {
             margin-bottom: 10px;
+        }
+
+        /*......... 2.2.2. banner left ..........*/
+        &-left {
+            position: relative;
+
+            /*......... 2.2.2.1. banner left summary ..........*/
+            &__summary {
+                .flex-cross--end;
+                justify-content: space-between;
+                flex-direction: column;
+                width: 42.8%;
+
+                .pacifico--regular;
+                font-size: 20px;
+                letter-spacing: .1px;
+
+                position: absolute;
+                bottom: 28%;
+                right: 13%;
+            }
+
+            /*......... 2.2.2.2. banner left ads ..........*/
+            &__ads {
+                width: 100%;
+            }
+
+            /*......... 2.2.2.3. banner left summary ..........*/
+            &__button {
+                justify-content: center;
+                width: 108px;
+                height: 40px;
+                margin-right: 20px;
+                margin-top: 3px;
+
+                .montserrat--regular;
+                font-size: 14px;
+                color: @_white-0;
+                text-transform: capitalize;
+
+                background-color: @_purple-0;
+            }
+        }
+
+        /*......... 2.2.3. banner right ..........*/
+        &-right {
+            /*......... 2.2.3.1. banner right item ..........*/
+            &__item {
+                position: relative;   
+            }
+
+            /*......... 2.2.3.2. banner right up ..........*/
+            &-up {
+                &__summary {
+                    .flex-main--center;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    width: 83.33%;
+                    height: 130px;
+                    padding: 20px 0 15px 28px;
+                    border: 1px solid @_white-0;
+
+                    .montserrat--regular;
+                    font-size: 20px;
+                    text-transform: uppercase;
+
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);   
+                    box-sizing: border-box;
+                } 
+
+                &__ads {
+                    color: @_gray-8;
+                    font-size: 16px;
+                    letter-spacing: 3px;
+                    margin-bottom: 5px;
+                }
+
+                &__sub-ads {
+                    .montserrat--bold;
+                    color: @_black-1;
+                }              
+                  
+            }
+
+            /*......... 2.2.3.3. banner right down ..........*/
+            &-down {
+                /*......... 2.2.3.3.1. banner right down summary ..........*/
+                &__summary {
+                    position: absolute;
+                    top: 120px;
+                    left: 40px;   
+                    box-sizing: border-box;
+
+                    .montserrat--regular;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                }
+
+                /*......... 2.2.3.3.2. banner right down ads ..........*/
+                &__ads {
+                    .montserrat--regular;
+                    color: @_gray-8;
+                    font-size: 16px;
+                    letter-spacing: 3px;
+                }
+
+                /*......... 2.2.3.3.3. banner right down sub ads ..........*/
+                &__sub-ads {
+                    .montserrat--bold;
+                    color: @_black-1;
+                    margin-bottom: 16px;
+                    font-size: 21px;
+                }    
+
+                 /*......... 2.2.2.3. banner left summary ..........*/
+                &__button {
+                    justify-content: center;
+                    width: 108px;
+                    height: 40px;
+
+                    font-size: 14px;
+                    color: @_white-0;
+                    text-transform: capitalize;
+
+                    background-color: @_purple-0;
+                }
+            }
         }
     }
 
@@ -136,7 +287,8 @@
             margin-bottom: 27px;
 
             font-size: 24px;
-            letter-spacing: 2.2px;
+            letter-spacing: 2px;
+            word-spacing: 5px;
         }
     }
 
@@ -144,14 +296,18 @@
     .product {
         /*......... 2.4.1. product card ..........*/
         &-card {
+            width: 100%;
+            padding: 0 15px;
             margin-bottom: 43px;
+            box-sizing: border-box;
         }
 
         /*......... 2.4.2. product image container ..........*/
         &-image {
             &-container {
                position: relative;
-               margin-bottom: 10px; 
+               margin-bottom: 14px; 
+               line-height: 0;
             }
             
             /*......... 2.4.2.1 product image element ..........*/
@@ -168,8 +324,8 @@
                 height: 40px;
 
                 position: absolute;
-                bottom: 9px;
-                left: 4px;
+                bottom: 7px;
+                left: 5px;
                 z-index: 100;
 
                 background-color: @_white-0;
@@ -177,9 +333,13 @@
 
             /*......... 2.4.3.1. product cart button ..........*/
             &-button {
+                .flex-cross--center;
+                justify-content: center;
+                height: 100%;
+
                 .montserrat--bold;
                 font-size: 12px;
-                text-transform: uppercase; 
+                text-transform: uppercase;
             } 
 
             &-button:hover {
@@ -253,8 +413,32 @@
      .banner {
         /*......... 3.1.1. banner container ..........*/
         &-right{
-          .flex-main--arround;
-          align-items: center; 
+          .flex-main--between;
+          align-items: start;
+          
+          /*......... 3.1.1.1. banner right item ..........*/
+          &__item {
+            margin-top: 0;
+            height: 200px;
+            overflow: hidden; 
+          }
+
+          /*......... 3.1.1.2. banner right down ..........*/
+          &-down {
+            /*......... 3.1.1.2.1. banner right down summary ..........*/
+            &__summary {
+                top: 40px;
+                font-size: 30px;
+            }
+          }
+        }
+        
+        /*......... 3.1.2. banner left ..........*/
+        &-left {
+            /*......... 3.1.2.1. banner left summary..........*/  
+            &__summary {
+                font-size: 28px;
+            }
         }
     }
 
@@ -263,6 +447,36 @@
         /*......... 3.2.1. product container ..........*/
         &-container {
             .flex-main--arround;
+        }
+
+        /*......... 3.2.2. product card ..........*/
+        &-card {
+            width: 25%;
+            max-width: 263px;
+        }
+
+        /*......... 3.2.3. product name ..........*/
+        &-name {
+            font-size: 10px;
+        }
+
+        /*......... 3.2.4. product star container ..........*/
+        &-star-container {
+            font-size: 9px;
+        }
+
+        /*......... 3.2.5. product star cart ..........*/
+        &-cart {
+            /*......... 3.2.5.1. product star cart container ..........*/
+            &-container {
+                width: 60px;
+                height: 30px;
+            }
+
+            /*......... 3.2.5.2. product star cart button ..........*/
+            &-button {
+                font-size: 8px;
+            }
         }
     }
 }
@@ -282,6 +496,15 @@
         /*......... 4.1.1. banner left ..........*/
         &-left {
             width: 65.79%;
+            /*......... 4.1.1.1. banner left summary..........*/  
+            &__summary {
+                font-size: 30px;
+            }
+
+            /*......... 4.1.1.2. banner left ads ..........*/  
+            &__ads {
+                width: 340px;
+            }
         }
 
         /*......... 4.1.2. banner right ..........*/
@@ -289,20 +512,16 @@
             width: 31.67%;
             .flex-main--between;
             flex-direction: column;
+
+             /*......... 4.1.2.1. banner right item..........*/  
+             &__item {
+                height: auto;
+            }
         }
 
         /*......... 4.1.3. banner image ..........*/
         &-image {
             margin-bottom: 0;
-        }
-    }
-
-    /*......... 4.2. product ..........*/
-    .product {
-        /*......... 4.2.1. product card ..........*/
-        &-card {
-            width: 25%;
-            max-width: 263px;
         }
     }
 
@@ -329,6 +548,33 @@
             font-size: 24px;
         }
     }
+
+    /*......... 4.4. product ..........*/
+    .product {
+        /*......... 4.4.1. product container ..........*/
+        &-name {
+            font-size: 14px;
+        }
+
+        /*......... 4.4.2. product star container ..........*/
+        &-star-container {
+            font-size: 13px;
+        }
+
+        /*......... 4.4.3. product star cart ..........*/
+        &-cart {
+            /*......... 4.4.3.1. product star cart container ..........*/
+            &-container {
+                width: 120px;
+                height: 40px;
+            }
+
+            /*......... 4.4.3.2. product star cart button ..........*/
+            &-button {
+                font-size: 12px;
+            }
+        }
+    }
 }
 
 /*......... End laptop style ..........*/
@@ -347,6 +593,17 @@
         &-container {
           .flex-main--between;
         }
+
+        /*......... 5.2.2. banner right ..........*/
+        &-right {
+         /*......... 5.2.2.1. banner right down ..........*/
+         &-down {
+            /*......... 5.2.2.1.1. banner right down summary ..........*/
+            &__summary {
+                top: 120px;
+            }
+         }
+        }
     }
 
     /*......... 5.3. product ..........*/
@@ -359,6 +616,7 @@
         /*......... 5.3.2. product card ..........*/
         &-card{
             width: 100%;
+            padding: 0;
         }
 
         /*......... 5.3.3. product summary ..........*/
