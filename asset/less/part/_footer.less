@@ -94,15 +94,15 @@
 
         /*......... 2.3. footer about ..........*/
         &-about {
-            .flex-cross--center;
+            .flex-cross--start;
             flex-direction: column;
             width: 100%;
         }
 
         /*......... 2.4. footer title ..........*/
         &-title {
-            .flex-main--center;
-            width: 80%;
+            .flex-main--start;
+            width: 100%;
             height: 48px;
             margin-bottom: 20px;
             border-bottom: 2px solid rgba(255, 255, 255, 0.1);
@@ -136,9 +136,8 @@
         /*......... 2.7. footer nav ..........*/
         &-nav {
             width: 100%;
-            max-width: 360px;
             margin-bottom: 40px;
-            .flex-cross--center;
+            .flex-cross--start;
             flex-direction: column;
 
             /*......... 2.7.1. footer nav container ..........*/
@@ -150,7 +149,11 @@
             /*......... 2.7.2. footer left/right ..........*/
             &-left,
             &-right {
-                .flex-main--center;
+                .flex-main--start;
+
+                ul {
+                    width:100%;
+                }
             }
 
             &-left{
@@ -189,7 +192,6 @@
         /*......... 2.9. footer location ..........*/
         &-location {
             width: 100%;
-            max-width: 262px;
             .flex-cross--center;
             flex-direction: column;
 
@@ -334,27 +336,35 @@
             box-sizing: border-box;
         }
 
-        /*......... 3.1.3. footer location ..........*/
+        /*......... 3.1.4. footer location ..........*/
         &-location {
-            /*......... 3.1.3.1. footer left ..........*/
+            max-width: 262px;
+
+            /*......... 3.1.4.1. footer left ..........*/
             &-left {
                 padding-top: 6px;
                 padding-bottom: 4px;
             }
-            /*......... 3.1.3.2. footer phone ..........*/
+            /*......... 3.1.4.2. footer phone ..........*/
             &-phone {
                 margin-top: 30px;
             }
 
-            /*......... 3.1.3.3. footer right ..........*/
+            /*......... 3.1.4.3. footer right ..........*/
             &-right {
                 height: 127px;
             }
         }
 
-        /*......... 3.1.4. footer link ..........*/
-        &-link {
-            .flex-main--center;
+        /*......... 3.1.5. footer title ..........*/
+        &-title {
+            .flex-main--start;
+            width:100%;
+        }
+
+        /*......... 3.1.6. footer nav ..........*/
+        &-nav {
+            max-width: 360px;
         }
     }   
     /*......... 3.2. copy right ..........*/
@@ -410,12 +420,6 @@
             padding-right: 0;
         }
 
-         /*......... 5.1.2. footer title ..........*/
-        &-title {
-            width: 100%;
-            .flex-main--start;
-        }
-
          /*......... 5.1.3. footer list ..........*/
          &-list {
             width: 100%;
@@ -430,11 +434,6 @@
 
              font-size: 14px;
          }
-
-        /*......... 5.1.5. footer about ..........*/
-        &-about {
-            .flex-cross--start;
-        }
 
         /*......... 5.1.6. footer nav ..........*/
         &-nav {
