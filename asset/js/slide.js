@@ -6,7 +6,8 @@ $(document).ready(function(){
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 2000,
-      variableWidth: true
+      variableWidth: true,
+      initialSlide:1
     };
     $(".blog-slider").slick(data);
   });

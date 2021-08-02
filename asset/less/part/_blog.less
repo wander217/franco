@@ -58,8 +58,8 @@
         &-container {
             .flex-main--center;
             width: 100%;
-            height: 705px;
-            margin-top: 36px;
+            height: 710px;
+            margin-top: 30px;
             padding: 75px 10px 0;
 
             .montserrat--bold;
@@ -72,11 +72,13 @@
             /*......... 2.1.1.1. Blog title ..........*/
             .feature-title {
                 font-size: 10px;
+                margin-bottom: 13px;
             }
 
             /*......... 2.1.1.2. Blog subtitle ..........*/
             .feature-subtitle {
                 font-size: 20px;
+                margin-bottom: 23px;
             }
         }
 
@@ -114,7 +116,7 @@
 
             position: absolute;
             left:20px;
-            top: 20px;
+            top: 23px;
             z-index: 100;
 
             background-color: @_blue-0;
@@ -149,22 +151,23 @@
 
         /*......... 2.1.8. Blog summary ..........*/
         &-summary {
-            padding: 15px;
+            width:100%;
+            padding: 18px 15px 15px 10px;
             border-bottom: 2px solid @_gray-7;
 
             text-transform: none;
+            box-sizing: border-box;
         }
 
         /*......... 2.1.9. Blog name ..........*/
         &-name {
-            margin-bottom: 17px;
-            width: 100%;
+            margin-bottom: 15px;
             padding-left: 10px;
 
+            .montserrat--regular;
             color: @_black-0; 
             line-height: 20px;
-            font-weight: 700;
-            color: @_black-0;
+            font-size:16px;
         }
 
         &-name:hover {
@@ -173,14 +176,15 @@
 
         /*......... 2.1.10. Blog description ..........*/
         &-description {
-            width: 100%;
-            max-width: 321px;
+            width: 95%;
             padding-left: 10px;
 
             .opensans--regular;
             font-size: 14px;
             line-height: 22px;
             letter-spacing: .2px;
+            box-sizing: border-box;
+            word-break: break-word;
         }
 
         /*......... 2.1.11. Blog action ..........*/
@@ -232,9 +236,9 @@
            width: 350px;
        }
 
-       /*......... 2.1.4. Blog image container ..........*/
-       &-image-container {
-        max-width: 360px;
+       /*......... 4.1.3. Blog description ..........*/
+       &-description {
+        max-width: 321px;
        }
    }
 }
@@ -247,7 +251,7 @@
     .blog {
         /*......... 5.1.1. Blog container ..........*/
         &-container {
-            padding-top: 74px;
+            padding-top: 77px;
             flex-direction: column;
             .flex-cross--center;
             justify-content: start;
@@ -260,12 +264,17 @@
 
             .feature-title {
                 font-size: 12px;
-                padding-left: 0;
+                padding-left: 4px;
             }
 
             .feature-subtitle {
                 font-size: 24px;
-                letter-spacing: 2.2;
+                padding-left: 1px;
+                box-sizing: border-box;
+
+                span {
+                    margin-left: -6px;
+                }
             }
         }
 
@@ -286,6 +295,12 @@
         &-slider {
             max-width: 1140px;
             width: 100%;
+        }
+
+         /*......... 4.1.2. Blog card ..........*/
+        &-card {
+            width: 360px;
+            margin: 0 30px 0 0;
         }
     }
 }

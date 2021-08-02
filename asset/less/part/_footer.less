@@ -262,7 +262,7 @@
             &-container{
                 .flex-cross--center;
                 flex-direction: column;
-                padding: 23px 10px;
+                padding: 20px 10px;
                 max-width: 1140px;
                 width: 100%;
 
@@ -279,6 +279,8 @@
             /*......... 2.10.3. company ..........*/
             &-company {
                 color: @_white-0;
+                font-size:14px;
+                margin-left:-4px;
             }
         }
     }
@@ -391,20 +393,34 @@
         flex-direction: column;
     }
 
-    /*......... 5.1. footer ..........*/
+    /*......... 4.1. footer ..........*/
     .footer {
-        /*......... 5.1.1. footer up ..........*/
+        /*......... 4.1.1. footer up ..........*/
         &-up {
             .flex-main--between;
         }
 
-        /*......... 5.1.2. footer about ..........*/
+        /*......... 4.1.2. footer about ..........*/
         &-about {
             flex-direction: column;
             max-width: 263px;
             flex-grow: unset;
         }
     }
+
+    /*......... 4.2 copy right ..........*/
+    .copy-right {
+        order: 1;
+    }
+
+     /*......... 4.3. payment ..........*/
+     .payment {
+        /*......... 4.3.1. payment container ..........*/
+        &-container {
+            order: 2;
+            margin-bottom: 0;
+        }
+     }
 }
 
 /*......... end laptop style ..........*/
@@ -428,7 +444,7 @@
 
          /*......... 5.1.4. footer link ..........*/
          &-link {
-             margin-bottom: 12px;
+             margin-bottom: 11px;
              width: fit-content;
              .flex-main--start;
 
@@ -437,26 +453,19 @@
 
         /*......... 5.1.6. footer nav ..........*/
         &-nav {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
      }   
 
      /*......... 5.2. copy right ..........*/
     .copy-right {
-        order: 1;
         font-size: 13px;
         letter-spacing: .15px;
     }
 
     /*......... 5.3. payment ..........*/
     .payment {
-        /*......... 5.3.1. payment container ..........*/
-        &-container {
-            order: 2;
-            margin-bottom: 0;
-        }
-
-        /*......... 5.3.2. payment list ..........*/
+        /*......... 5.3.1. payment list ..........*/
         &-list {
             justify-content: space-between;
             margin-right: 1px;

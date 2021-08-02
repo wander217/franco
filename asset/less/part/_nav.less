@@ -204,7 +204,7 @@
             width: auto;
             flex-grow: 1;
             max-width: 895px;
-            margin-left: 5px;
+            margin-left: 10px;
 
             position: initial;
         }
@@ -216,7 +216,7 @@
                 display: flex;
 
                 padding-left: 40px;
-                padding-right: 20px;
+                padding-right: 15px;
             }
 
             /*......... 4.1.1.2. menu link icon ..........*/
@@ -255,7 +255,7 @@
 
     /*......... 5.1. nav ..........*/
     nav {
-        padding: 5px 30px 5px 29px;
+        padding: 5px 25px 5px 29px;
     }
 
     /*......... 5.2. logo container ..........*/
@@ -269,14 +269,23 @@
     .icon {
         &-container {
             width: 222px;
+            margin-right: 15px;
+            justify-content:flex-start;
         }
 
         /*......... 5.3.1. icon link ..........*/
         &-link {
+            margin-left:147px;
+
             /*......... 5.3.1.1. icon link element ..........*/
             &__element {
                 font-size: 27px;
             }
+        }
+
+        /*......... 5.3.1. icon cart ..........*/
+        &-cart {
+            margin-left: 35px;
         }
     }
 
@@ -287,13 +296,6 @@
             &__item {
                 padding-right: 5px;
             }
-        }
-    }
-
-    /*......... 5.5. menu icon container ..........*/
-    .icon {
-        &-container {
-            margin-right: 10px;
         }
     }
 }
