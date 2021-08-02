@@ -4,7 +4,7 @@ $(document).ready(function(){
       infinite: true,
       arrows: false,
       slidesToScroll: 1,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 2000,
       variableWidth: true,
       initialSlide:1
