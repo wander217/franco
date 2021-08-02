@@ -373,9 +373,9 @@
 
         /*......... 2.4.5. product name ..........*/
         &-name {
-            .montserrat--regular;
+            .montserrat--bold;
             font-size: 14px;
-            margin-bottom: 8px;
+            margin-bottom: 7px;
             line-height: 26px;
         }
 
@@ -410,6 +410,7 @@
 
             /*......... 2.4.7.2. product cost old ..........*/
             &--old {
+                .opensans--regular();
                 color: @_gray-4;
                 font-weight: 400;
                 text-decoration: line-through;
@@ -418,9 +419,9 @@
 
             /*......... 2.4.7.3. product cost new ..........*/
             &--new {
+                .opensans--bold();
                 color: @_purple-0;
                 font-size: 15px;
-                margin-left: -3px;
             }
         }
 
@@ -705,6 +706,11 @@
             &-container {
                 display: block;
             }
+        }
+
+        &-name{
+            font-size:13px;
+            letter-spacing: .1px;
         }
     }
 
