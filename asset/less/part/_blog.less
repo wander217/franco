@@ -60,7 +60,7 @@
             width: 100%;
             height: 710px;
             margin-top: 30px;
-            padding: 75px 10px 0;
+            padding: 75px 0 0;
 
             .montserrat--bold;
             text-transform: uppercase;
@@ -240,6 +240,17 @@
        &-description {
         max-width: 321px;
        }
+
+       /*......... 5.1.4. Blog slider ..........*/
+       &-slider {
+            width: 100%;
+            max-width:1140px;
+       }
+
+       /*......... 5.1.5. Blog card ..........*/
+       &-card {
+        width:calc(calc(100vw/2) - 20px);
+       }
    }
 }
 
@@ -278,14 +289,7 @@
             }
         }
 
-        /*......... 5.1.2. Blog slider ..........*/
-        &-slider {
-            padding: 0;
-            width: 100%;
-            max-width:1140px;
-        }
-
-        /*......... 5.1.3. Blog card ..........*/
+        /*......... 5.1.2. Blog card ..........*/
         &-card {
             width:calc(calc(100vw/3) - 20px);
             max-width: calc(calc(1140px/3) - 20px);
